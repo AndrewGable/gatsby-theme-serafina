@@ -1,0 +1,10 @@
+{
+  "name": "gatsby-theme-serafina",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Andrew Gable <andrewgable@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^4.13.1"
+  }
+}

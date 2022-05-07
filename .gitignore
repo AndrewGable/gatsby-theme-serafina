@@ -1,0 +1,9 @@
+# Gatsby Files
+.cache
+public
+
+# JS files
+node_modules
+
+# IDE specific files
+.idea
