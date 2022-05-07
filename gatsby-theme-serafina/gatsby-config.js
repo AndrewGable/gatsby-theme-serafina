@@ -48,8 +48,6 @@ module.exports = themeOptions => {
             },
             `gatsby-plugin-react-helmet`,
             `gatsby-plugin-theme-ui`,
-            `gatsby-transformer-sharp`,
-            `gatsby-plugin-sharp`,
             {
                 resolve: `gatsby-transformer-yaml`,
                 options: {
@@ -69,6 +67,17 @@ module.exports = themeOptions => {
                     path: options.assetPath || `src/assets`,
                     name: options.assetPath || `src/assets`
                 }
+            },
+            `gatsby-plugin-image`,
+            `gatsby-transformer-sharp`,
+            `gatsby-plugin-sharp`,
+            {
+                resolve: `gatsby-plugin-remote-images`,
+                options: {
+                    nodeType: 'Gallery',
+                    imagePath: 'photos[].url',
+                    silent: false
+                },
             },
         ]
     }

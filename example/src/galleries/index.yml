@@ -1,42 +1,103 @@
 - name: Serafina
   slug: /
   photos:
-    - title: USA
-      alt: USA
-      url: https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
-    - title: Marrakesh
-      alt: Marrakesh
-      url: https://images.unsplash.com/photo-1570133435529-62359fac701b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80
-    - title: San Francisco
-      alt: San Francisco
-      url: https://images.unsplash.com/photo-1583743220494-3da91330c2fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80
-    - title: Italy
-      alt: Italy
-      url: https://images.unsplash.com/photo-1583855282680-6dbdc69b0932?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80
-    - title: Philippines
-      alt: Philippines
-      url: https://images.unsplash.com/photo-1583841549298-ac61d2378c73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2090&q=80
-    - title: Shibuya
-      alt: Shibuya
-      url: https://images.unsplash.com/photo-1583536363246-f2d0fcf8ec92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80
-    - title: Canada
-      alt: Canada
-      url: https://images.unsplash.com/photo-1548704807-5e3622c539a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
-    - title: USA
-      alt: USA
-      url: https://images.unsplash.com/photo-1583427551602-bf2bb7abb9b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=943&q=80
-    - title: Moscow
-      alt: Moscow
-      url: https://images.unsplash.com/photo-1580489958137-ca0bfaa1cc36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2687&q=80
-    - title: Brasil
-      alt: Brasil
-      url: https://images.unsplash.com/photo-1583161443085-2e2947a6664c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80
-    - title: France
-      alt: France
-      url: https://images.unsplash.com/photo-1572956056930-bdc5aca0b379?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
-    - title: Barcelona
-      alt: Barcelona
-      url: https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
-    - title: Thailand
-      alt: Thailand
-      url: https://images.unsplash.com/photo-1583511416766-083ba12de77c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
+    - title: Summer in Venice
+      alt: Summer in Venice
+      url: https://images.unsplash.com/photo-1520175480921-4edfa2983e0f
+    - title: Sunset in Bellagio, Italy
+      alt: Sunset in Bellagio, Italy
+      url: https://images.unsplash.com/photo-1583855282680-6dbdc69b0932
+    - title: Fiat 500
+      alt: Fiat 500
+      url: https://images.unsplash.com/photo-1499602211854-122b55ef8f5d
+    - title: Colosseum, Rome, Italy
+      alt: Colosseum, Rome, Italy
+      url: https://images.unsplash.com/photo-1514896856000-91cb6de818e0
+    - title: Vernazza sunset
+      alt: Vernazza sunset
+      url: https://images.unsplash.com/photo-1499678329028-101435549a4e
+    - title: Altare della Patria, Rome, Italy
+      alt: Altare della Patria, Rome, Italy
+      url: https://images.unsplash.com/photo-1556958540-2378bacb6f59
+    - title: Vintage bike in Ostuni, Italy
+      alt: Vintage bike in Ostuni, Italy
+      url: https://images.unsplash.com/photo-1496864137062-a12b5defe6be
+    - title: Manarola, Italy
+      alt: Manarola, Italy
+      url: https://images.unsplash.com/photo-1535063406830-27dfae54262a
+    - title: Rome, Metropolitan City of Rome, Italy
+      alt: Rome, Metropolitan City of Rome, Italy
+      url: https://images.unsplash.com/photo-1569416078500-3857b00616f8
+    - title: Capri, Italy
+      alt: Capri, Italy
+      url: https://images.unsplash.com/photo-1560189236-71c235494695
+    - title: Colosseum
+      alt: Colosseum
+      url: https://images.unsplash.com/photo-1492110182377-95eee14016e1
+    - title: Ponte Cavour
+      alt: Ponte Cavour
+      url: https://images.unsplash.com/photo-1603897987759-dcd7dfab98bb
+    - title: Lago di Braies
+      alt: Lago di Braies
+      url: https://images.unsplash.com/photo-1487622750296-6360190669a1
+    - title: Summer in italy
+      alt: Summer in italy
+      url: https://images.unsplash.com/photo-1531815899068-c17a69dff6ab
+    - title: neighborhood
+      alt: neighborhood
+      url: https://images.unsplash.com/38/HBzQnOQ6CWhlNi1YwAxZ_italy.jpg
+    - title: Caorle, Italy
+      alt: Caorle, Italy
+      url: https://images.unsplash.com/photo-1485707117786-2f5328bc2cc4
+    - title: Ostuni, Italy
+      alt: Ostuni, Italy
+      url: https://images.unsplash.com/photo-1482524879038-d4adbcbdd0fb
+    - title: Rome Cafe
+      alt: Rome Cafe
+      url: https://images.unsplash.com/photo-1618410715706-d1d7911bc193
+
+- name: Asia
+  slug: /asia
+  photos:
+    - title: Shanghai, China
+      alt: Shanghai, China
+      url: https://images.unsplash.com/photo-1597531922242-823dbfca45bd
+    - title: Lungshan Temple, Taipei, Taiwan
+      alt: Lungshan Temple, Taipei, Taiwan
+      url: https://images.unsplash.com/photo-1535139262971-c51845709a48
+    - title: Tegallalang Rice Terrace, Bali, Indonesia
+      alt: Tegallalang Rice Terrace, Bali, Indonesia
+      url: https://images.unsplash.com/photo-1513415756790-2ac1db1297d0
+    - title: Shifen Old Street, Taiwan
+      alt: Shifen Old Street, Taiwan
+      url: https://images.unsplash.com/photo-1526682847805-721837c3f83b
+    - title: Dong Ba market, Thành phố Huế, Vietnam
+      alt: Dong Ba market, Thành phố Huế, Vietnam
+      url: https://images.unsplash.com/photo-1488743196279-d2b91fd9e633
+    - title: Tokyo, Japan
+      alt: Tokyo, Japan
+      url: https://images.unsplash.com/photo-1503899036084-c55cdd92da26
+    - title: Marina Bay Sands
+      alt: Marina Bay Sands
+      url: https://images.unsplash.com/photo-1534960695591-5904eba555e6
+    - title: Kyoto, Japan
+      alt: Kyoto, Japan
+      url: https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e
+    - title: Dotonbori, Osaka, Japan
+      alt: Dotonbori, Osaka, Japan
+      url: https://images.unsplash.com/photo-1505069190533-da1c9af13346
+    - title: Kayangan Lake, Coron, Palawan, Philippines
+      alt: Kayangan Lake, Coron, Palawan, Philippines
+      url: https://images.unsplash.com/photo-1593994603115-deaa40043bae
+    - title: Kyoto Market
+      alt: Kyoto Market
+      url: https://images.unsplash.com/photo-1584977250134-aa19917cf7e1
+    - title: Hong Kong
+      alt: Hong Kong
+      url: https://images.unsplash.com/photo-1645974715934-f47f63c05ea6
+    - title: Wan Chai, Hong Kong
+      alt: Wan Chai, Hong Kong
+      url: https://images.unsplash.com/photo-1604208073678-2753d0da599f
+    - title: Mong Kok, Hong Kong
+      alt: Mong Kok, Hong Kong
+      url: https://images.unsplash.com/photo-1604208013489-a5cc560de8db

@@ -5,7 +5,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import { Box } from "theme-ui";
 import SEO from "./seo";
 
-export default ({ name, options, photos }) => {
+export default ({ name, options, data }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -19,14 +19,14 @@ export default ({ name, options, photos }) => {
     setViewerIsOpen(false);
   };
 
-  const galleryPhotos = photos.map(photo => ({
-    src: photo.url.childImageSharp.fluid.srcWebp,
-    width: photo.url.childImageSharp.fluid.presentationWidth,
-    height: photo.url.childImageSharp.fluid.presentationHeight,
-    sizes: photo.url.childImageSharp.fluid.sizes,
-    srcSet: photo.url.childImageSharp.fluid.srcSetWebp,
-    alt: photo.alt,
-    title: photo.alt
+  const galleryPhotos = data.gallery.localImage.map(photo => ({
+    src: photo.childImageSharp.gatsbyImageData.images.fallback.src,
+    width: photo.childImageSharp.gatsbyImageData.width,
+    height: photo.childImageSharp.gatsbyImageData.height,
+    sizes: photo.childImageSharp.gatsbyImageData.images.sources.sizes,
+    srcSet: photo.childImageSharp.gatsbyImageData.images.sources.srcSet,
+    // alt: photo.alt,
+    // title: photo.alt
   }));
 
   return (

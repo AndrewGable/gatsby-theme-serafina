@@ -2,8 +2,6 @@ const fs = require(`fs`);
 const path = require(`path`);
 const mkdirp = require(`mkdirp`);
 const Debug = require(`debug`);
-const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
-const isRelativeUrl = require("is-relative-url");
 const sanitizeSlug = require("./utils/sanitize-slug");
 const debug = Debug(`gatsby-theme-blog-core`);
 const withDefaults = require(`./utils/default-options`);
@@ -24,33 +22,6 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
       mkdirp.sync(dir);
     }
   });
-};
-
-exports.onCreateNode = async (
-    { node, actions, store, cache, createNodeId },
-    themeOptions
-) => {
-  const { createNode } = actions;
-
-  if (node.internal.type === `Gallery`) {
-    if (
-        node.photos.length > 0 &&
-        node.photos.every(photo => !isRelativeUrl(photo.url))
-    ) {
-      for (let index = 0; index < node.photos.length; index++) {
-        const photoNode = await createRemoteFileNode({
-          url: node.photos[index].url,
-          store,
-          cache,
-          createNode,
-          createNodeId,
-          parentNodeId: node.id
-        });
-
-        if (photoNode) node.photos[index].url___NODE = photoNode.id;
-      }
-    }
-  }
 };
 
 const GalleryTemplate = require.resolve(`./src/templates/gallery-query`);
