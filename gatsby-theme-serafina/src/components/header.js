@@ -22,7 +22,7 @@ const Header = () => {
         justifyContent: ["center", null, null, "initial"],
         bg: "primary",
         position: "fixed",
-        zIndex: 1100,
+        zIndex: 100,
         top: 0,
         left: 0,
         overflow: "auto",
