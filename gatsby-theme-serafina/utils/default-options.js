@@ -3,15 +3,15 @@ module.exports = themeOptions => {
   const pagesPath = themeOptions.contentPath || `src/pages`;
   const assetPath = themeOptions.assetPath || `src/assets`;
   const disableContact = false;
-  const margin = themeOptions.margin || 6;
-  const direction = themeOptions.direction || "column";
+  const spacing = themeOptions.spacing || 6;
+  const layout = themeOptions.layout || "columns";
 
   return {
     galleriesPath,
     pagesPath,
     assetPath,
     disableContact,
-    margin,
-    direction
+    spacing,
+    layout
   };
 };

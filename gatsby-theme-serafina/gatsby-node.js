@@ -29,7 +29,7 @@ const MdxTemplate = require.resolve(`./src/templates/mdx-query.js`);
 
 exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
   const { createPage } = actions;
-  const { margin, direction } = withDefaults(themeOptions);
+  const { spacing, layout } = withDefaults(themeOptions);
 
   const result = await graphql(`
     {
@@ -75,8 +75,8 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
       context: {
         name: node.name,
         options: {
-          margin,
-          direction
+          spacing,
+          layout
         }
       }
     });
