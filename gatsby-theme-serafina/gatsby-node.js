@@ -27,15 +27,15 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
 };
 
 exports.onCreateNode = async (
-  { node, actions, store, cache, createNodeId },
-  themeOptions
+    { node, actions, store, cache, createNodeId },
+    themeOptions
 ) => {
   const { createNode } = actions;
 
   if (node.internal.type === `Gallery`) {
     if (
-      node.photos.length > 0 &&
-      node.photos.every(photo => !isRelativeUrl(photo.url))
+        node.photos.length > 0 &&
+        node.photos.every(photo => !isRelativeUrl(photo.url))
     ) {
       for (let index = 0; index < node.photos.length; index++) {
         const photoNode = await createRemoteFileNode({
@@ -70,6 +70,16 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
           }
         }
       }
+      allMdx {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -77,16 +87,15 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
     reporter.panic(result.errors);
   }
 
-  const { allGallery } = result.data;
+  const { allGallery, allMdx } = result.data;
 
-  // TODO: RE-add `allMdx`
-  // allMdx.edges.forEach(({ node }) => {
-  //   createPage({
-  //     path: sanitizeSlug(node.frontmatter.slug),
-  //     component: MdxTemplate,
-  //     context: { id: node.id }
-  //   });
-  // });
+  allMdx.edges.forEach(({ node }) => {
+    createPage({
+      path: sanitizeSlug(node.frontmatter.slug),
+      component: MdxTemplate,
+      context: { id: node.id }
+    });
+  });
 
   allGallery.edges.forEach(({ node }) => {
     createPage({

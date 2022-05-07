@@ -9,7 +9,7 @@ module.exports = themeOptions => {
             description: `Description placeholder`,
             author: "Gatsby",
             image: "",
-            name: `Serena`,
+            name: `Serafina`,
             tagline: `Gatsby Theme`,
             menuLinks,
             socialLinks: [
@@ -28,6 +28,24 @@ module.exports = themeOptions => {
             ]
         },
         plugins: [
+            {
+                resolve: `gatsby-plugin-mdx`,
+                options: {
+                    extensions: [`.mdx`, `.md`],
+                    defaultLayouts: {
+                        default: require.resolve("./src/components/page.js")
+                    },
+                    gatsbyRemarkPlugins: [
+                        {
+                            resolve: `gatsby-remark-images`,
+                            options: {
+                                maxWidth: 1380,
+                                linkImagesToOriginal: false
+                            }
+                        },
+                    ],
+                }
+            },
             `gatsby-plugin-react-helmet`,
             `gatsby-plugin-theme-ui`,
             `gatsby-transformer-sharp`,
@@ -43,6 +61,13 @@ module.exports = themeOptions => {
                 options: {
                     path: options.contentPath || `src`,
                     name: options.contentPath || `src`
+                }
+            },
+            {
+                resolve: `gatsby-source-filesystem`,
+                options: {
+                    path: options.assetPath || `src/assets`,
+                    name: options.assetPath || `src/assets`
                 }
             },
         ]

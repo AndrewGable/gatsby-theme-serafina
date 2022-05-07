@@ -1,5 +1,5 @@
 {
-  "name": "serafina-example",
+  "name": "example",
   "version": "1.0.0",
   "author": "Andrew Gable <andrewgable@gmail.com>",
   "license": "MIT",
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "gatsby": "^4.13.1",
+    "gatsby-plugin-manifest": "^4.13.0",
     "gatsby-theme-serafina": "^1.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
