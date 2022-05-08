@@ -5,10 +5,12 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import {Box} from "theme-ui";
 import SEO from "./seo";
+import useWindowDimensions from "../hooks/use-window-dimensions";
 
 export default ({name, options, data}) => {
     const [photoIndex, setPhotoIndex] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
+    const { width } = useWindowDimensions();
 
     const openLightbox = (event, photo, index) => {
         setPhotoIndex(index);
@@ -32,9 +34,9 @@ export default ({name, options, data}) => {
                 photos={galleryPhotos}
                 layout={options.layout}
                 spacing={options.spacing}
-                columns={(containerWidth) => {
-                    if (containerWidth < 500) return 1;
-                    if (containerWidth < 800) return 2;
+                columns={() => {
+                    if (width < 500) return 1;
+                    if (width < 800) return 2;
                     return 3;
                 }}
                 onClick={openLightbox}
