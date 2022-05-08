@@ -12,8 +12,8 @@ const Footer = () => {
       sx={{
         alignItems: "center",
         justifyContent: "center",
-        width: ["100%", null, "calc(100% - 300px)"],
-        marginLeft: [0, null, 300],
+        width: ["100%", null, null, "calc(100% - 300px)"],
+        marginLeft: [0, null, null, 300],
         padding: 3,
         fontSize: 3
       }}

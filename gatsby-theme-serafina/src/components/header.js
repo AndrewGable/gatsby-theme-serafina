@@ -1,16 +1,17 @@
 import React from "react";
 /** @jsx jsx */
 import { jsx, Box, Flex, MenuButton, Close } from "theme-ui";
-import { useResponsiveValue } from "@theme-ui/match-media";
 import Logo from "./logo";
 import Tagline from "./tagline";
 import Nav from "./nav";
 import Social from "./social";
 import { Link } from "gatsby";
 import useToggle from "../hooks/use-toggle";
+import useWindowDimensions from "../hooks/use-window-dimensions";
 
 const Header = () => {
-  const screen = useResponsiveValue(["mobile", "tablet", "laptop", "desktop"]);
+  const { width } = useWindowDimensions();
+  const screen = width >= 1280 ? "desktop" : "mobile";
   const { isOpen, onToggle } = useToggle(false);
 
   return (
