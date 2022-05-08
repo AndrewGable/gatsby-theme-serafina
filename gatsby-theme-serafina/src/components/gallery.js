@@ -25,8 +25,6 @@ export default ({name, options, data}) => {
         title: data.gallery.photos[index].alt
     }));
 
-    console.log(galleryPhotos)
-
     return (<Layout>
         <SEO title={name}/>
         <Box sx={{p: `${options.spacing}px`}}>

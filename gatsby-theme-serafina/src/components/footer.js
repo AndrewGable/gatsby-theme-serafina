@@ -13,7 +13,6 @@ const Footer = () => {
         alignItems: "center",
         justifyContent: "center",
         width: ["100%", null, "calc(100% - 300px)"],
-        marginTop: 5,
         marginLeft: [0, null, 300],
         padding: 3,
         fontSize: 3
