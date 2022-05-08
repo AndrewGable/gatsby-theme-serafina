@@ -25,7 +25,6 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
 };
 
 const GalleryTemplate = require.resolve(`./src/templates/gallery-query`);
-const MdxTemplate = require.resolve(`./src/templates/mdx-query.js`);
 
 exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
   const { createPage } = actions;
@@ -41,16 +40,6 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
           }
         }
       }
-      allMdx {
-        edges {
-          node {
-            id
-            frontmatter {
-              slug
-            }
-          }
-        }
-      }
     }
   `);
 
@@ -58,15 +47,7 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
     reporter.panic(result.errors);
   }
 
-  const { allGallery, allMdx } = result.data;
-
-  allMdx.edges.forEach(({ node }) => {
-    createPage({
-      path: sanitizeSlug(node.frontmatter.slug),
-      component: MdxTemplate,
-      context: { id: node.id }
-    });
-  });
+  const { allGallery } = result.data;
 
   allGallery.edges.forEach(({ node }) => {
     createPage({
@@ -86,6 +67,5 @@ exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
 exports.onCreatePage = ({ page, actions }, themeOptions) => {
   const { deletePage } = actions;
   const { disableContact } = withDefaults(themeOptions);
-
   if (disableContact && page.path === "/contact/") deletePage(page);
 };

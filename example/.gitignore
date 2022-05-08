@@ -1,0 +1,6 @@
+node_modules
+
+# Firebase specifics
+.firebaserc
+firebase.json
+.firebase/
