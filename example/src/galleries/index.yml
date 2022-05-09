@@ -1,4 +1,4 @@
-- name: Serafina
+- name: Italy
   slug: /
   photos:
     - title: Summer in Venice
@@ -56,7 +56,7 @@
       alt: Rome Cafe
       url: https://images.unsplash.com/photo-1618410715706-d1d7911bc193
 
-- name: Asia
+- name: Asia Gallery
   slug: /asia
   photos:
     - title: Shanghai, China
@@ -101,3 +101,7 @@
     - title: Mong Kok, Hong Kong
       alt: Mong Kok, Hong Kong
       url: https://images.unsplash.com/photo-1604208013489-a5cc560de8db
+
+- name: Dog Gallery
+  slug: /dog
+  s3: true

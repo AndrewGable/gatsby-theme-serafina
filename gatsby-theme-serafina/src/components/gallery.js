@@ -6,32 +6,35 @@ import 'react-image-lightbox/style.css';
 import {Box} from "theme-ui";
 import SEO from "./seo";
 import useWindowDimensions from "../hooks/use-window-dimensions";
+import {FaCameraRetro, FaStopwatch, FaRulerHorizontal} from "react-icons/fa";
+import {FiAperture} from "react-icons/fi";
 
-export default ({name, options, data}) => {
+export default ({name, options, photos}) => {
     const [photoIndex, setPhotoIndex] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
-    const { width } = useWindowDimensions();
+    const {width} = useWindowDimensions();
 
     const openLightbox = (event, photo, index) => {
         setPhotoIndex(index);
         setIsOpen(true);
     };
 
-    const galleryPhotos = data.gallery.localImage.map((photo, index) => ({
-        src: photo.childImageSharp.gatsbyImageData.images.fallback.src,
-        width: photo.childImageSharp.gatsbyImageData.width,
-        height: photo.childImageSharp.gatsbyImageData.height,
-        sizes: photo.childImageSharp.gatsbyImageData.images.sources[0].sizes,
-        srcSet: photo.childImageSharp.gatsbyImageData.images.sources[0].srcSet,
-        alt: data.gallery.photos[index].alt,
-        title: data.gallery.photos[index].alt
-    }));
+    const getCaption = (photo) => {
+        if (photo.EXIF) {
+            let cameraEXIF = photo.EXIF.Model + ' ' + photo.EXIF.LensModel;
+            // Remove any duplicated words (e.g. from iPhone EXIF)
+            cameraEXIF = Array.from(new Set(cameraEXIF.split(' '))).join( " ");
+            return (<><div style={{display: "flex", alignItems: "center", gap: 6}}><FaCameraRetro />{cameraEXIF}</div><div style={{display: "flex", alignItems: "center", gap: 6}}><FaRulerHorizontal/> {Math.round(photo.EXIF.FocalLength * 10)/10}mm <FiAperture/> ƒ/{photo.EXIF.FNumber} <FaStopwatch/> 1/{Math.round(1/photo.EXIF.ExposureTime)} ISO {photo.EXIF.ISO} </div></>)
+        }
+
+        return photo.title;
+    }
 
     return (<Layout>
         <SEO title={name}/>
         <Box sx={{p: `${options.spacing}px`}}>
             <PhotoAlbum
-                photos={galleryPhotos}
+                photos={photos}
                 layout={options.layout}
                 spacing={options.spacing}
                 columns={() => {
@@ -44,13 +47,13 @@ export default ({name, options, data}) => {
         </Box>
         {isOpen && (
             <Lightbox
-                mainSrc={galleryPhotos[photoIndex].src}
-                nextSrc={galleryPhotos[(photoIndex + 1) % galleryPhotos.length].src}
-                prevSrc={galleryPhotos[(photoIndex + galleryPhotos.length - 1) % galleryPhotos.length].src}
+                mainSrc={photos[photoIndex].src}
+                nextSrc={photos[(photoIndex + 1) % photos.length].src}
+                prevSrc={photos[(photoIndex + photos.length - 1) % photos.length].src}
                 onCloseRequest={() => setIsOpen(false)}
-                onMovePrevRequest={() => setPhotoIndex((photoIndex + galleryPhotos.length - 1) % galleryPhotos.length)}
-                onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % galleryPhotos.length)}
-                imageCaption={galleryPhotos[photoIndex].title}
+                onMovePrevRequest={() => setPhotoIndex((photoIndex + photos.length - 1) % photos.length)}
+                onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % photos.length)}
+                imageCaption={getCaption(photos[photoIndex])}
                 reactModalStyle={{overlay: {zIndex: 200}}}
             />
         )}

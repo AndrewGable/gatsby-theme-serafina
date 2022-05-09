@@ -79,6 +79,15 @@ module.exports = themeOptions => {
                     silent: false
                 },
             },
+            {
+                resolve: `gatsby-source-s3-image`,
+                options: {
+                    accessKeyId: options.s3AccessKeyId,
+                    secretAccessKey: options.s3SecretAccessKey,
+                    bucketName: options.s3BucketName,
+                    domain: options.s3Domain,
+                },
+            }
         ]
     }
 };
