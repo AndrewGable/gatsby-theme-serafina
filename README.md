@@ -2,6 +2,7 @@
 
 ## How to run/develop theme
 ```shell
+yarn global add gatsby-cli
 yarn install
 yarn workspace example develop
 ```
