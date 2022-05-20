@@ -2,6 +2,7 @@
 
 ## How to run/develop theme
 ```shell
+yarn install
 yarn workspace example develop
 ```
 
