@@ -6,18 +6,18 @@ module.exports = {
     image: "https://gatsby-theme-serena.netlify.com/og-image.webp",
     name: `Serafina`,
     tagline: `Photography Theme`,
-    social: [
+    socialLinks: [
       {
         name: `Facebook`,
-        url: `https://facebook.com`,
+        url: `https://facebook.com/123`,
       },
       {
         name: `Twitter`,
-        url: `https://twitter.com`,
+        url: `https://twitter.com/123`,
       },
       {
         name: `Instagram`,
-        url: `https://instagram.com`,
+        url: `https://instagram.com/123`,
       },
     ],
   },

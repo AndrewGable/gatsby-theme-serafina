@@ -12,20 +12,7 @@ module.exports = themeOptions => {
             name: `Serafina`,
             tagline: `Gatsby Theme`,
             menuLinks,
-            socialLinks: [
-                {
-                    name: `Facebook`,
-                    url: `https://facebook.com`
-                },
-                {
-                    name: `Twitter`,
-                    url: `https://twitter.com`
-                },
-                {
-                    name: `Instagram`,
-                    url: `https://instagram.com`
-                }
-            ]
+            socialLinks: []
         },
         plugins: [
             {

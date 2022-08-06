@@ -12,7 +12,8 @@ import {
   FaBehance,
   FaDribbble,
   Fa500Px,
-  FaFlickr
+  FaFlickr,
+  FaRegEnvelope
 } from "react-icons/fa";
 
 const icons = {
@@ -29,6 +30,7 @@ const icons = {
   behance: FaBehance,
   dribbble: FaDribbble,
   flickr: FaFlickr,
+  email: FaRegEnvelope,
   "500px": Fa500Px
 };
 
