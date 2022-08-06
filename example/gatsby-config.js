@@ -37,7 +37,6 @@ module.exports = {
     {
       resolve: `gatsby-theme-serafina`,
       options: {
-        disableContact: true,
         enableS3: true,
         s3AccessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
         s3SecretAccessKey : process.env.AWS_S3_SECRET_ACCESS_KEY,
