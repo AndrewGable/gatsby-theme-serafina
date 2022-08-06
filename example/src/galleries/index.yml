@@ -1,5 +1,6 @@
 - name: Italy
   slug: /
+  s3: false
   photos:
     - title: Summer in Venice
       alt: Summer in Venice
@@ -58,6 +59,7 @@
 
 - name: Asia Gallery
   slug: /asia
+  s3: false
   photos:
     - title: Shanghai, China
       alt: Shanghai, China
@@ -105,3 +107,8 @@
 - name: Dog Gallery
   slug: /dog
   s3: true
+  # @hack: photos is required for now otherwise the graphql query in gallery-query.js pukes
+  photos:
+    - title: Empty Title
+      alt: Empty Alt
+      url: https://google.com

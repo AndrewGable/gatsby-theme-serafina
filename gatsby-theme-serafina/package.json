@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
+    "@marceasen/gatsby-source-s3-image": "^1.2.1",
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
     "@theme-ui/presets": "^0.14.5",
@@ -21,7 +22,6 @@
     "gatsby-plugin-theme-ui": "^0.14.5",
     "gatsby-remark-images": "^6.13.0",
     "gatsby-source-filesystem": "^4.13.0",
-    "gatsby-source-s3-image": "^1.6.221",
     "gatsby-transformer-sharp": "^4.13.0",
     "gatsby-transformer-yaml": "^4.13.0",
     "install": "^0.13.0",

@@ -1759,6 +1759,18 @@
   dependencies:
     "@lezer/common" "^0.15.0"
 
+"@marceasen/gatsby-source-s3-image@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@marceasen/gatsby-source-s3-image/-/gatsby-source-s3-image-1.2.1.tgz#deac9aa2314f17f1255e1e2a1bc053bdc433f06f"
+  integrity sha512-/XtoQiDdAVtPZiYOGVk/Tbq/yfLMA+2E350+LLHTKHOMwd7D1nhoANWKujan0c8MbeaYQU7WDUejJfc0g9Ii9g==
+  dependencies:
+    aws-sdk "2.1027.0"
+    fracty "1.0.9"
+    invariant "2.2.4"
+    lodash "4.17.21"
+    mime-types "2.1.34"
+    ts-exif-parser "0.2.2"
+
 "@mdx-js/mdx@v1":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"
@@ -3702,12 +3714,12 @@ autoprefixer@^10.4.0:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-aws-sdk@2.684.0:
-  version "2.684.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.684.0.tgz#14e313893b3225511d12f4a0985e7b0613603006"
-  integrity sha512-OkSMKIbRTBd3YV5iAklJxZFyLg0jRO2XW6+WhMuDBHMEs8aRbZw4iAD85wFC8tG7X9o0kcjnWfZUDq7MK1dcDg==
+aws-sdk@2.1027.0:
+  version "2.1027.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1027.0.tgz#64688b27607aade2df8de380f5852d67855f1f9b"
+  integrity sha512-j3UjPV9hzyCvkmfcbhRscMggdmrPqlhvo8QzkXCGFfPXjZMh1OJd4HkCEH2NaunzLOyF2Y3QzxKrGOLMT7sNzg==
   dependencies:
-    buffer "4.9.1"
+    buffer "4.9.2"
     events "1.1.1"
     ieee754 "1.1.13"
     jmespath "0.15.0"
@@ -4072,10 +4084,10 @@ buffer-from@^1.0.0:
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
   integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
 
-buffer@4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.1.tgz#6d1bb601b07a4efced97094132093027c95bc298"
-  integrity sha1-bRu2AbB6TvztlwlBMgkwJ8lbwpg=
+buffer@4.9.2:
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.2.tgz#230ead344002988644841ab0244af8c44bbe3ef8"
+  integrity sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
@@ -6879,19 +6891,6 @@ gatsby-source-filesystem@^4.13.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-source-s3-image@^1.6.221:
-  version "1.6.221"
-  resolved "https://registry.yarnpkg.com/gatsby-source-s3-image/-/gatsby-source-s3-image-1.6.221.tgz#16b181f85aa358430fceb046d3dbf0a8cd08a8be"
-  integrity sha512-uK8VEaWUV6iw2K9k0M7cg+yiqUZyDOKwG3SVAFA+1rduEdys15uw2L2OPzWt8V4gBVD+m47uHKNWsA1rv9uMTw==
-  dependencies:
-    aws-sdk "2.684.0"
-    fracty "1.0.9"
-    invariant "2.2.4"
-    lodash "4.17.15"
-    luxon "1.24.1"
-    mime-types "2.1.27"
-    ts-exif-parser "0.1.6"
-
 gatsby-telemetry@^3.13.0:
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.13.0.tgz#54631345ecbf7113662f38b69fb413480d1f8a61"
@@ -9049,11 +9048,6 @@ lodash.without@^4.4.0:
   resolved "https://registry.yarnpkg.com/lodash.without/-/lodash.without-4.4.0.tgz#3cd4574a00b67bae373a94b748772640507b7aac"
   integrity sha1-PNRXSgC2e643OpS3SHcmQFB7eqw=
 
-lodash@4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
 lodash@4.17.21, lodash@^4.17.10, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -9134,11 +9128,6 @@ lru-queue@^0.1.0:
   integrity sha1-Jzi9nw089PhEkMVzbEhpmsYyzaM=
   dependencies:
     es5-ext "~0.10.2"
-
-luxon@1.24.1:
-  version "1.24.1"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.24.1.tgz#a8383266131ed4eaed4b5f430f96f3695403a52a"
-  integrity sha512-CgnIMKAWT0ghcuWFfCWBnWGOddM0zu6c4wZAWmD0NN7MZTnro0+833DF6tJep+xlxRPg4KtsYEHYLfTMBQKwYg==
 
 make-dir@^3.0.0, make-dir@^3.0.2, make-dir@^3.1.0:
   version "3.1.0"
@@ -9379,22 +9368,22 @@ micromatch@^4.0.4, micromatch@^4.0.5:
     braces "^3.0.2"
     picomatch "^2.3.1"
 
-mime-db@1.44.0:
-  version "1.44.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.44.0.tgz#fa11c5eb0aca1334b4233cb4d52f10c5a6272f92"
-  integrity sha512-/NOTfLrsPBVeH7YtFPgsVWveuL+4SjjYxaQ1xtM1KMFj7HdxlBlxeyNLzhyJVx7r4rZGJAZ/6lkKCitSc/Nmpg==
+mime-db@1.51.0:
+  version "1.51.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.51.0.tgz#d9ff62451859b18342d960850dc3cfb77e63fb0c"
+  integrity sha512-5y8A56jg7XVQx2mbv1lu49NR4dokRnhZYTtL+KGfaa27uq4pSTXkwQkFJl4pkRMyNFz/EtYDSkiiEHx3F7UN6g==
 
 mime-db@1.52.0, "mime-db@>= 1.43.0 < 2":
   version "1.52.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"
   integrity sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==
 
-mime-types@2.1.27:
-  version "2.1.27"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.27.tgz#47949f98e279ea53119f5722e0f34e529bec009f"
-  integrity sha512-JIhqnCasI9yD+SsmkquHBxTSEuZdQX5BuQnS2Vc7puQQQ+8yiP5AY5uWhpdv4YL4VM5c6iliiYWPgJ/nJQLp7w==
+mime-types@2.1.34:
+  version "2.1.34"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.34.tgz#5a712f9ec1503511a945803640fafe09d3793c24"
+  integrity sha512-6cP692WwGIs9XXdOO4++N+7qjqv0rqxxVvJ3VHPh/Sc9mVZcQP+ZGhkKiTvWMQRr2tbHkJP/Yn7Y0npb3ZBs4A==
   dependencies:
-    mime-db "1.44.0"
+    mime-db "1.51.0"
 
 mime-types@^2.1.12, mime-types@^2.1.27, mime-types@^2.1.30, mime-types@~2.1.24, mime-types@~2.1.34:
   version "2.1.35"
@@ -12976,10 +12965,10 @@ trough@^1.0.0:
   resolved "https://registry.yarnpkg.com/true-case-path/-/true-case-path-2.2.1.tgz#c5bf04a5bbec3fd118be4084461b3a27c4d796bf"
   integrity sha512-0z3j8R7MCjy10kc/g+qg7Ln3alJTodw9aDuVWZa3uiWqfuBMKeAeP2ocWcxoyM3D73yz3Jt/Pu4qPr4wHSdB/Q==
 
-ts-exif-parser@0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/ts-exif-parser/-/ts-exif-parser-0.1.6.tgz#22725c7354c3d79cf15a0fdb90f2c270d9c17cd4"
-  integrity sha512-2Xg6LHubJP9+yKPF7SQeVLeUlzsnYj7EUIO6+PdSfROiwc9AprXvM4ZaQt0t89XskIlkOWwxfseymihSU8rsLg==
+ts-exif-parser@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/ts-exif-parser/-/ts-exif-parser-0.2.2.tgz#436191fae502fbf5c71abe71e2f7d26aaa60e3e7"
+  integrity sha512-Z7qGRfvHaISUOErkKfc8Tp+GBnfMWCSyduiLJR0x/b/wKp60oiOvORk73fFML3l8Kf0gVX48mrRsYUcBEb5avQ==
   dependencies:
     sax "1.2.4"
 

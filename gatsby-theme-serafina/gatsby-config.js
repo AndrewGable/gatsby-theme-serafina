@@ -80,7 +80,7 @@ module.exports = themeOptions => {
                 },
             },
             {
-                resolve: `gatsby-source-s3-image`,
+                resolve: `@marceasen/gatsby-source-s3-image`,
                 options: {
                     accessKeyId: options.s3AccessKeyId,
                     secretAccessKey: options.s3SecretAccessKey,
