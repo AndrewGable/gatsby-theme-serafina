@@ -31,7 +31,6 @@
     "react-icons": "^4.3.1",
     "react-image-lightbox": "^5.1.4",
     "react-photo-album": "^1.13.2",
-    "theme-ui": "^0.14.5",
-    "typeface-nunito": "^1.1.13"
+    "theme-ui": "^0.14.5"
   }
 }
