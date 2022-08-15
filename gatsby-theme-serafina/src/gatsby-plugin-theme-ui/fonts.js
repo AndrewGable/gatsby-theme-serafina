@@ -1,5 +1,4 @@
-const fontSans =
-  '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif';
+const fontSans = '"Swiss 721", sans-serif';
 
 export default {
   body: fontSans,
