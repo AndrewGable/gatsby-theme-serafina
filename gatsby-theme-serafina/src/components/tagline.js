@@ -18,7 +18,7 @@ const Tagline = () => {
     }
   } = data;
 
-  return (
+  return tagline ? (
     <Text
       sx={{
         alignSelf: ["flex-end", null, null, "initial"],
@@ -30,7 +30,7 @@ const Tagline = () => {
     >
       {tagline}
     </Text>
-  );
+  ) : null;
 };
 
 export default Tagline;

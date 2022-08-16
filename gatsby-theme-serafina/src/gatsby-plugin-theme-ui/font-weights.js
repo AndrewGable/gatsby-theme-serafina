@@ -1,3 +1,3 @@
 export default {
-    heading: 900,
+    heading: 800,
 };
