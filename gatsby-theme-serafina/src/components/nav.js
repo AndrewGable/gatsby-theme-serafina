@@ -44,7 +44,8 @@ const Nav = () => {
             width: "100%",
             textAlign: "center",
             padding: 3,
-            fontSize: 3
+            fontSize: 3,
+            fontWeight: "bold"
           }}
         >
           {node.name}
@@ -60,7 +61,8 @@ const Nav = () => {
               width: "100%",
               textAlign: "center",
               padding: 3,
-              fontSize: 3
+              fontSize: 3,
+              fontWeight: "bold"
             }}
           >
             {link.name}

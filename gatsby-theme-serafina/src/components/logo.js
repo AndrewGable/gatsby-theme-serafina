@@ -5,7 +5,12 @@ import useName from "../hooks/use-name";
 const Logo = () => {
   const name = useName();
 
-  return <Heading sx={{fontSize: 5}}>{name}</Heading>;
+  return <Heading sx={{
+    width: "100%",
+    textAlign: "center", fontSize: [3, 3, 6, 6]
+  }}>
+    {name}
+  </Heading>;
 };
 
 export default Logo;

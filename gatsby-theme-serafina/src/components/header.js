@@ -48,7 +48,7 @@ const Header = () => {
             marginRight: [2, 3, null, 0]
           }}
         >
-          <Logo />
+            <Logo />
         </Link>
         <Tagline />
         <Box sx={{ flexGrow: "1" }} />
