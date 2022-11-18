@@ -7,11 +7,10 @@ import Nav from "./nav";
 import Social from "./social";
 import { Link } from "gatsby";
 import useToggle from "../hooks/use-toggle";
-import useWindowDimensions from "../hooks/use-window-dimensions";
+import {isDesktop} from "react-device-detect";
 
 const Header = () => {
-  const { width } = useWindowDimensions();
-  const screen = width >= 1024 ? "desktop" : "mobile";
+  const screen = isDesktop ? "desktop" : "mobile";
   const { isOpen, onToggle } = useToggle(false);
 
   return (
