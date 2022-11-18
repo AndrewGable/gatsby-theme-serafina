@@ -11,7 +11,7 @@ import useWindowDimensions from "../hooks/use-window-dimensions";
 
 const Header = () => {
   const { width } = useWindowDimensions();
-  const screen = width >= 1280 ? "desktop" : "mobile";
+  const screen = width >= 1024 ? "desktop" : "mobile";
   const { isOpen, onToggle } = useToggle(false);
 
   return (

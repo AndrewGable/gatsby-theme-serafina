@@ -5,14 +5,13 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import {Box} from "theme-ui";
 import SEO from "./seo";
-import useWindowDimensions from "../hooks/use-window-dimensions";
 import {FaCameraRetro, FaStopwatch, FaRulerHorizontal} from "react-icons/fa";
 import {FiAperture} from "react-icons/fi";
+import {isMobileOnly, isTablet} from "react-device-detect";
 
 export default ({name, options, photos}) => {
     const [photoIndex, setPhotoIndex] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
-    const {width} = useWindowDimensions();
 
     const openLightbox = (event, photo, index) => {
         setPhotoIndex(index);
@@ -53,8 +52,8 @@ export default ({name, options, photos}) => {
                 layout={options.layout}
                 spacing={options.spacing}
                 columns={() => {
-                    if (width < 500) return 1;
-                    if (width < 800) return 2;
+                    if (isMobileOnly) return 1;
+                    if (isTablet) return 2;
                     return 3;
                 }}
                 onClick={openLightbox}
